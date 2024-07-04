@@ -1,11 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html data-theme="cupcake" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hockey’s</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Tailwind css and daisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font-awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/f88d5b4dae.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Tailwind custom class -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "btn-color": "#ff4240",
+            },
+            backgroundImage: {
+              // First background images used for gradient
+              "hero-pattern":
+                "url('/images/Rectangle 5.png'), url('/images/banner.png')",
+              "hero-review": "url('/images/Rectangle 7.png')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header class="container mx-auto">
+      <section>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu-sm dropdown-content menu bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 text-[#424247] shadow"
+              >
+                <li>
+                  <a class="text-[#ff4240]">Home</a>
+                </li>
+                <li>
+                  <a>Services</a>
+                </li>
+                <li>
+                  <a>Cases</a>
+                </li>
+                <li>
+                  <a>Blog</a>
+                </li>
+                <li>
+                  <a>Contact Us</a>
+                </li>
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+              </ul>
+            </div>
+            <a class="eb-garamond bg-none text-xl font-extrabold" href="/"
+              ><h1 class="text-2xl font-extrabold text-[#131318] lg:text-4xl">
+                Hockey<span class="text-[#ff4240]">’</span>s
+              </h1></a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-[#707070]">
+              <li>
+                <a class="text-[#ff4240]">Home</a>
+              </li>
+              <li>
+                <a>Services</a>
+              </li>
+              <li>
+                <a>Cases</a>
+              </li>
+              <li>
+                <a>Blog</a>
+              </li>
+              <li>
+                <a>Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end gap-5">
+
+             <spna class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></spna>
+            <a
+              class="btn bg-btn-color poppins w-32 rounded-lg text-[18px] font-bold text-white"
+              >Get Ticket</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- carousel section -->
+       <section>
+        
+       </section>
+    </header>
+    <main class="container mx-auto"></main>
+    <footer></footer>
+  </body>
 </html>

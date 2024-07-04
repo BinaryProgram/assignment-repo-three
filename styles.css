@@ -1,0 +1,63 @@
+/* Most tricky part of this page */
+:root {
+    --gap: 2rem;
+    --line-thickness: 1px;
+    --line-color: #e7e7e7;
+    --line-offset: calc(var(--gap) / 2);
+}
+*{
+    font-family: "Manrope", sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: var(--gap); */
+    overflow: hidden;
+}
+
+.grid-container>.card-grid {
+    position: relative;
+}
+
+/* For reusable css */
+.grid-container>.card-grid::after,
+.grid-container>.card-grid::before {
+    content: "";
+    background-color: var(--line-color);
+    position: absolute;
+}
+
+/* for the horizontal line */
+.grid-container>.card-grid::after {
+    width: 100vw;
+    height: var(--line-thickness);
+    top: calc(var(--line-thickness) * -1);
+    left: 0;
+}
+
+/* for the vertical line */
+.grid-container>.card-grid::before {
+    width: var(--line-thickness);
+    height: 100vh;
+    top: 0;
+    left: calc(var(--line-thickness) * -1);
+}
+
+.manrope {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Ensure the label itself does not get any unwanted borders */
+.label-input {
+    border: none;
+}
+/* making search icon hidden */
+@media screen and (max-width:320px) {
+    .search-icon{
+        visibility:hidden;
+    }
+}
